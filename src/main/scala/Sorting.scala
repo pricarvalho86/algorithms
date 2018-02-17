@@ -1,6 +1,9 @@
+import scala.annotation.tailrec
+
 object Sorting {
 
   def findLowerValueFrom(list: Array[Int], index: Int = 0): Int = {
+    @tailrec
     def recursiveLowerValue(value: Int, index: Int): Int = {
       if(index < (list.length - 1)) {
         val currentValue = list(index)
@@ -13,7 +16,7 @@ object Sorting {
   }
 
   def sorting(list: Array[Int]) = {
-
+    @tailrec
     def recursiveSorting(currentList: Array[Int], sortedlist: Array[Int]): Array[Int] = {
       if(sortedlist.length < list.length) {
         val lowerValue = findLowerValueFrom(currentList)

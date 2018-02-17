@@ -3,6 +3,7 @@ import scala.annotation.tailrec
 object BinarySearch {
 
   def binarySearch(list: Array[Int], item: Int): Option[Int] = {
+    @tailrec
     def recursiveBinarySearch(low: Int, high: Int): Option[Int] = {
       val middlePosition = (low + high) / 2
       val positionValue = list(middlePosition)
