@@ -1,4 +1,4 @@
-def find_lower(list):
+def find_lower_value_from(list):
     lower = list[0]
     index_lower = 0
 
@@ -9,12 +9,13 @@ def find_lower(list):
     return index_lower
 
 
-def sort_by_selection(list):
+def sort(list):
     new_list = []
     for i in range(len(list)):
-        lower = find_lower(list)
+        lower = find_lower_value_from(list)
         new_list.append(list.pop(lower))
 
     return new_list
 
-print sort_by_selection([5,3,6,2,10])
+
+print sort([5,3,6,2,10])

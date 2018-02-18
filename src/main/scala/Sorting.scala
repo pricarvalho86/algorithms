@@ -7,12 +7,9 @@ object Sorting {
     def recursiveLowerValue(value: Int, index: Int): Int = {
       if(index < list.length) {
         val nextValue = list(index)
-        if(nextValue < value) {
-          recursiveLowerValue(nextValue, index+1)
-        } else {
-          recursiveLowerValue(value, index + 1)
-        }
-      } else value
+        if (nextValue < value) recursiveLowerValue(nextValue, index + 1)
+          else recursiveLowerValue(value, index + 1)
+       }else value
     }
     recursiveLowerValue(list(index), index+1)
   }
